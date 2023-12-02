@@ -2,7 +2,6 @@ dist
 doc
 
 backend/
-assets/
 html/
 public/
 
