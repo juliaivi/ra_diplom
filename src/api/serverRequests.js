@@ -1,4 +1,4 @@
-const url = 'http://localhost:7070/api';
+const url = "http://localhost:7070/api";
 // Хиты продаж
 export const getHitList = async () => {
   const response = await fetch(`${url}/top-sales`);
@@ -37,7 +37,9 @@ export const getNotAllCatalogItems = async (id) => {
 };
 // Загрузить ещё
 export const getLoadMoreItems = async (id, offset) => {
-  const response = await fetch(`${url}/items?categoryId=${id}&offset=${offset}`);
+  const response = await fetch(
+    `${url}/items?categoryId=${id}&offset=${offset}`,
+  );
   if (!response.ok) {
     throw new Error(response.statusText);
   }
@@ -48,7 +50,9 @@ export const getLoadMoreItems = async (id, offset) => {
 export const searchItems = async (search, categorie) => {
   const params = new URLSearchParams({ q: search });
 
-  const response = await fetch(`${url}/items?${params}&categoryId=${categorie}`);
+  const response = await fetch(
+    `${url}/items?${params}&categoryId=${categorie}`,
+  );
   if (!response.ok) {
     throw new Error(response.statusText);
   }
@@ -68,9 +72,9 @@ export const getItemInfo = async (id) => {
 export const sendOrder = async (order) => {
   try {
     const response = await fetch(`${url}/order`, {
-      method: 'POST',
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(order),
     });

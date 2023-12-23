@@ -1,6 +1,4 @@
-import {
-  put, takeEvery, spawn, takeLatest,
-} from 'redux-saga/effects';
+import { put, takeEvery, spawn, takeLatest } from "redux-saga/effects";
 import {
   getHitList,
   getCategoriesList,
@@ -10,9 +8,9 @@ import {
   getLoadMoreItems,
   getAllCatalogItems,
   getNotAllCatalogItems,
-} from '../../api/serverRequests';
+} from "../../api/serverRequests";
 
-import { orderRequest, orderSuccess, orderFailure } from '../slice/orderSlice';
+import { orderRequest, orderSuccess, orderFailure } from "../slice/orderSlice";
 import {
   catalogListSuccess,
   catalogListRequest,
@@ -22,16 +20,20 @@ import {
   getMore,
   catalogListFailure,
   catalogListReset,
-} from '../slice/catalogListSlice';
+} from "../slice/catalogListSlice";
 import {
   categoriesListFailure,
   categoriesListSuccess,
   categoriesListRequest,
   categoriesChange,
   clearCategories,
-} from '../slice/categoriesListSlice';
+} from "../slice/categoriesListSlice";
 
-import { hitListRequest, hitListSuccess, hitListFailure } from '../slice/hitListSlice';
+import {
+  hitListRequest,
+  hitListSuccess,
+  hitListFailure,
+} from "../slice/hitListSlice";
 
 function* handleHitSaga() {
   try {
@@ -90,7 +92,10 @@ function* watchNotAllCatalogItemsSaga() {
 
 function* handleGetMoreItemsSaga(action) {
   try {
-    const data = yield getLoadMoreItems(action.payload.categorieActive, action.payload.offset);
+    const data = yield getLoadMoreItems(
+      action.payload.categorieActive,
+      action.payload.offset,
+    );
     yield put(catalogListSuccess(data));
   } catch (e) {
     yield put(catalogListFailure(e.message));
@@ -103,7 +108,10 @@ function* watchLoadMoreItemsSaga() {
 
 function* handleSearchItemSaga(action) {
   try {
-    const data = yield searchItems(action.payload.payload, action.payload.categorieActive);
+    const data = yield searchItems(
+      action.payload.payload,
+      action.payload.categorieActive,
+    );
     yield put(catalogListSuccess(data));
   } catch (e) {
     yield put(catalogListFailure(e));

@@ -1,14 +1,14 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  itemCategories: [{ id: 0, title: 'Все' }],
+  itemCategories: [{ id: 0, title: "Все" }],
   categorieActive: 0,
   loadingCategories: true,
   errorCategories: false,
 };
 
 export const categoriesListSlice = createSlice({
-  name: 'categoriesList',
+  name: "categoriesList",
   initialState,
   reducers: {
     categoriesListRequest: (state) => {
@@ -31,7 +31,7 @@ export const categoriesListSlice = createSlice({
       state.categorieActive = action.payload;
     },
     clearCategories: (state) => {
-      state.itemCategories = [{ id: 0, title: 'Все' }];
+      state.itemCategories = [{ id: 0, title: "Все" }];
       state.loadingCategories = false;
       state.errorCategories = false;
     },

@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   items: [],
@@ -7,7 +7,7 @@ const initialState = {
 };
 
 export const hitListSlice = createSlice({
-  name: 'hitList',
+  name: "hitList",
   initialState,
   reducers: {
     hitListRequest: (state) => {
@@ -23,14 +23,9 @@ export const hitListSlice = createSlice({
       state.loading = false;
       state.error = action.payload;
     },
-
   },
-
 });
 
-export const {
-  hitListRequest,
-  hitListSuccess,
-  hitListFailure,
-} = hitListSlice.actions;
+export const { hitListRequest, hitListSuccess, hitListFailure } =
+  hitListSlice.actions;
 export default hitListSlice.reducer;

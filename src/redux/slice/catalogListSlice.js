@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   itemCatalog: [],
@@ -7,13 +7,13 @@ const initialState = {
   categorieActive: 0,
   itemLength: null,
   offset: 0,
-  search: '',
+  search: "",
   item: null,
   id: null,
 };
 
 export const catalogListSlice = createSlice({
-  name: 'catalogList',
+  name: "catalogList",
   initialState,
   reducers: {
     catalogListRequest: (state) => {

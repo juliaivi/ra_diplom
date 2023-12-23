@@ -1,14 +1,14 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  order: '',
+  order: "",
   success: null,
   loading: false,
   error: false,
 };
 
 export const orderSlice = createSlice({
-  name: 'order',
+  name: "order",
   initialState,
   reducers: {
     orderRequest: (state, action) => {
@@ -26,7 +26,7 @@ export const orderSlice = createSlice({
       state.error = action.payload;
     },
     orderclear: (state) => {
-      state.order = '';
+      state.order = "";
       state.success = null;
       state.loading = false;
       state.error = false;
@@ -34,7 +34,6 @@ export const orderSlice = createSlice({
   },
 });
 
-export const {
-  orderFailure, orderRequest, orderSuccess, orderclear,
-} = orderSlice.actions;
+export const { orderFailure, orderRequest, orderSuccess, orderclear } =
+  orderSlice.actions;
 export default orderSlice.reducer;

@@ -1,15 +1,18 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&subset=cyrillic-ext');
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&subset=cyrillic-ext');
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&subset=cyrillic-ext");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed&subset=cyrillic-ext");
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 a {
   color: #727e86;
 }
 
-a, a:hover, a:visited, a:active {
+a,
+a:hover,
+a:visited,
+a:active {
   text-decoration: none;
 }
 
@@ -26,7 +29,8 @@ li {
   list-style-type: none;
 }
 
-th, tr {
+th,
+tr {
   height: 45px;
 }
 
@@ -39,7 +43,8 @@ tbody tr td {
   padding-left: 10px;
 }
 
-th, td {
+th,
+td {
   border: 1px solid rgb(194, 194, 194);
 }
 
@@ -52,7 +57,7 @@ table {
 #root {
   width: 1024px;
   margin: 0 auto;
-}  
+}
 
 /* Common Styles */
 .invisible {
@@ -64,9 +69,9 @@ header {
   margin: 0 24px;
 }
 
-header .row  {
+header .row {
   display: block;
-} 
+}
 
 .header-controls-pics {
   display: flex;
@@ -105,10 +110,12 @@ header .row  {
   font-size: 11px;
   line-height: 21px;
   text-align: center;
-  color: #FFFFFF;
+  color: #ffffff;
   border-radius: 50%;
   background: linear-gradient(90deg, #ff65a5 1.11%, #ff8076 100%);
-  box-shadow: 0px 2px 8px rgba(255, 101, 165, 0.6), inset 0px 1px 1px #ff8076;
+  box-shadow:
+    0px 2px 8px rgba(255, 101, 165, 0.6),
+    inset 0px 1px 1px #ff8076;
 }
 .header-controls-search-form {
   position: absolute;
@@ -118,8 +125,8 @@ header .row  {
   width: 233px;
   height: 38px;
   padding: 0 20px;
-  background: #FFFFFF;
-  box-shadow: 0px 0px 10px #D4E4E6;
+  background: #ffffff;
+  box-shadow: 0px 0px 10px #d4e4e6;
   border-radius: 50px;
   text-align: right;
 }
@@ -148,13 +155,17 @@ header .row  {
   font-size: 48px;
   line-height: 98px;
   text-align: center;
-  color: #FFFFFF;
-  background: linear-gradient(270deg, rgba(161, 179, 191, 0.8) 72.59%, rgba(161, 179, 191, 0) 98.05%);
+  color: #ffffff;
+  background: linear-gradient(
+    270deg,
+    rgba(161, 179, 191, 0.8) 72.59%,
+    rgba(161, 179, 191, 0) 98.05%
+  );
 }
 
 /* Preloader */
 .preloader {
-  margin: 10px auto;  
+  margin: 10px auto;
   position: relative;
   width: 30px;
   height: 30px;
@@ -169,7 +180,7 @@ header .row  {
   animation: spin 2s ease infinite;
 }
 .preloader :first-child {
-  background: #19A68C;
+  background: #19a68c;
   animation-delay: -1.5s;
 }
 .preloader :nth-child(2) {
@@ -216,10 +227,10 @@ header .row  {
 
 .catalog-item-card {
   margin-bottom: 1em;
-  border: 1px solid #c5c5c5;/**/
-  width: 300px;/**/
-  position: relative;/**/
-  height: 470px;/**/
+  border: 1px solid #c5c5c5; /**/
+  width: 300px; /**/
+  position: relative; /**/
+  height: 470px; /**/
   margin: 10px;
 }
 
@@ -239,15 +250,15 @@ header .row  {
   width: 100%;
   height: 38px;
   padding: 0 20px;
-  background: #FFFFFF;
-  box-shadow: 0px 0px 10px #D4E4E6;
+  background: #ffffff;
+  box-shadow: 0px 0px 10px #d4e4e6;
   border-radius: 50px;
   margin-bottom: 2em;
 }
 
 .catalog-search-form .form-control {
   width: 100%;
-  height: 95%;/*  */
+  height: 95%; /*  */
   color: #333333;
   border: none;
   outline: none;
@@ -267,7 +278,8 @@ header .row  {
   border-radius: 6px;
 }
 
-.catalog .card-body .btn-outline-primary, .card-body .btn-outline-primary {
+.catalog .card-body .btn-outline-primary,
+.card-body .btn-outline-primary {
   border-radius: 6px;
 }
 
@@ -284,9 +296,9 @@ header .row  {
 .footer-pay-systems {
   width: 46px;
   height: 28px;
-  border: 2px solid #FFFFFF;
+  border: 2px solid #ffffff;
   border-radius: 8px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   background-repeat: no-repeat;
   background-image: url(../src/img/footer-sprite.png);
 }
@@ -365,7 +377,8 @@ footer .row {
   color: #ff0000;
 } */
 
-h2, .h2 {
+h2,
+.h2 {
   margin-bottom: 1.5em;
   margin-top: 2em;
 }
@@ -382,23 +395,22 @@ h2, .h2 {
 
 .navbar {
   display: flex;
-  position: relative ;
+  position: relative;
 }
 
 .navbar-nav {
   display: flex;
-
 }
 .nav-item {
   padding: 0 10px;
 }
 
-.navbar-nav .nav-item .active{
+.navbar-nav .nav-item .active {
   color: #333333;
   font-weight: 600;
 }
 
-.top-sales .row  {
+.top-sales .row {
   display: flex;
 }
 
@@ -449,36 +461,43 @@ form.card-body {
 .col-7 table td {
   width: 50%;
   padding: 10px 9px;
-} 
+}
 
 .col-7 {
   width: 600px;
   margin-left: 40px;
 }
 
-.cart tbody tr td:nth-child(2), thead tr th:nth-child(2) {
+.cart tbody tr td:nth-child(2),
+thead tr th:nth-child(2) {
   width: 47%;
 }
 
-.cart tbody tr td:first-child, thead tr th:first-child {
+.cart tbody tr td:first-child,
+thead tr th:first-child {
   width: 4%;
 }
 
-.cart tbody tr td:nth-child(3), thead tr th:nth-child(3) {
+.cart tbody tr td:nth-child(3),
+thead tr th:nth-child(3) {
   width: 9%;
 }
-.cart tbody tr td:nth-child(4), thead tr th:nth-child(4) {
+.cart tbody tr td:nth-child(4),
+thead tr th:nth-child(4) {
   width: 9%;
 }
-.cart tbody tr td:last-child, thead tr th:last-child {
+.cart tbody tr td:last-child,
+thead tr th:last-child {
   width: 10%;
 }
 
-.cart tbody tr td, thead tr th {
+.cart tbody tr td,
+thead tr th {
   width: 10%;
 }
 
-.cart tbody tr td:last-child, thead tr th:last-child {
+.cart tbody tr td:last-child,
+thead tr th:last-child {
   width: 10%;
 }
 
@@ -496,7 +515,7 @@ form.card-body {
 .btn-secondary {
   padding: 11px 9px 8px;
   background-color: #5c5f61;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .btn-secondary:first-child {
@@ -511,7 +530,7 @@ form.card-body {
   background-color: #7d7c7c;
 }
 
-.btn-group {  
+.btn-group {
   padding: 8px 0;
   margin-left: 10px;
   border: 1px solid gray;
@@ -550,7 +569,7 @@ form.card-body {
 
 p .btn-group .btn-outline-primary {
   border-radius: none;
-} 
+}
 
 .col-7 .btn-block {
   width: 100%;
@@ -565,7 +584,7 @@ p .btn-group .btn-outline-primary {
   border: 1px solid #f87575;
 }
 
-main .row  {
+main .row {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -577,7 +596,7 @@ main .row  {
 
 .text-right {
   text-align: right;
-} 
+}
 
 .text-center {
   text-align: center;
@@ -590,7 +609,7 @@ main .row  {
 .collapse {
   width: 100%;
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
 }
 
 .control__elements {
@@ -606,10 +625,10 @@ main .row  {
   max-width: 300px;
   max-height: 280px;
   margin: auto;
-  object-fit:contain;
+  object-fit: contain;
 }
 
 .images {
   max-width: 300px;
-  height:300px;
+  height: 300px;
 }
